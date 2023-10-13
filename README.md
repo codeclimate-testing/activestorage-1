@@ -82,8 +82,10 @@ end
 
 ## Roadmap
 
-This separate repository is a staging ground for eventual inclusion in rails/rails prior to the Rails 5.2 release. It is not intended to be a long-term stand-alone repository. Compatibility with prior versions of Rails is not a development priority either. 
+This separate repository is a staging ground for eventual inclusion in rails/rails prior to the Rails 5.2 release. It is not intended to be a long-term stand-alone repository. Compatibility with prior versions of Rails is not a development priority either. Trigger build.
 
 ## License
 
 Active Storage is released under the [MIT License](https://opensource.org/licenses/MIT).
+
+Trigger
