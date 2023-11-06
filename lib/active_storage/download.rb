@@ -21,6 +21,8 @@ class ActiveStorage::Download
     @stored_file = stored_file
   end
 
+
+  
   def headers(force_attachment: false)
     {
       x_accel_redirect:    "/reproxy",
