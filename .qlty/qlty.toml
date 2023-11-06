@@ -1,0 +1,18 @@
+config_version = "0"
+cli_version = "0.146.0"
+
+[sources.default]
+repository = "https://token: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@github.com/qltyai/plugins.git"
+ref = "v0.11.0-pre"
+
+[runtimes.enabled]
+linux = "3.17.1"
+node = "19.6.0"
+ruby = "3.2.1"
+
+[plugins.enabled]
+fixme = "0.0.2"
+gitleaks = "8.15.3"
+markdownlint = "0.35.0"
+prettier = "2.8.4"
+rubocop = "1.45.1"
