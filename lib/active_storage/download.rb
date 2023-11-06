@@ -3,6 +3,7 @@ class ActiveStorage::Download
   # Downloading .ai as application/postscript files in Safari appends .ps to the extension.
   # Sending HTML, SVG, XML and SWF files as binary closes XSS vulnerabilities.
   # Sending JS files as binary avoids InvalidCrossOriginRequest without compromising security.
+
   CONTENT_TYPES_TO_RENDER_AS_BINARY = %w(
     text/html
     text/javascript
