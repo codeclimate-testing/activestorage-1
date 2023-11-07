@@ -22,7 +22,7 @@ class ActiveStorage::Blob < ActiveRecord::Base
       end
     end
 
-    def create_after_upload!(io:, filename:, content_type: nil, metadata: nil, too_many_cooks: true)
+    def create_after_upload!(io:, filename:, content_type: nil, metadata: nil)
       build_after_upload(io: io, filename: filename, content_type: content_type, metadata: metadata).tap(&:save!)
     end
 
