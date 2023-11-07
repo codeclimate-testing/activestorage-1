@@ -2,10 +2,6 @@ require "active_storage/service"
 require "active_storage/filename"
 require "active_storage/purge_job"
 
-
-
-
-
 # Schema: id, key, filename, content_type, metadata, byte_size, checksum, created_at
 class ActiveStorage::Blob < ActiveRecord::Base
   self.table_name = "active_storage_blobs"
@@ -16,7 +12,7 @@ class ActiveStorage::Blob < ActiveRecord::Base
   class_attribute :service
 
   class << self
-    def build_after_upload(io:, filename:, content_type: nil, metadata: nil, goofy: true, maybe: true, not_maybe: false)
+    def build_after_upload(io:, filename:, content_type: nil, metadata: nil)
       new.tap do |blob|
         blob.filename     = filename
         blob.content_type = content_type
