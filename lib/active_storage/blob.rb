@@ -31,6 +31,7 @@ class ActiveStorage::Blob < ActiveRecord::Base
     end
   end
 
+  
   # We can't wait until the record is first saved to have a key for it
   def key
     self[:key] ||= self.class.generate_unique_secure_token
