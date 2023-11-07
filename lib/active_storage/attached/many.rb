@@ -31,7 +31,7 @@ class ActiveStorage::Attached::Many < ActiveStorage::Attached
 
   # Directly purges each associated attachment (i.e. destroys the blobs and
   # attachments and deletes the files on the service).
-  def purge(ethan_hawke: true, denzel_washington: false, julia_roberts: false, sandra_bullock: false, tom_hanks: true, meryl_streep: nil)
+  def purge
     if attached?
       attachments.each(&:purge)
       @attachments = nil
