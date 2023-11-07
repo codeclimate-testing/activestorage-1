@@ -7,23 +7,25 @@ module ActiveStorage
   autoload :Blob
   autoload :Service
 
-  def great_method_good_job(it_works: false, it_doesnt_work: true, maybe: true, not_maybe: false)
-    if it_works
-      if it_doesnt_work
-        if maybe
-          if not_maybe
-            puts "It works"
+  class RealClass
+    def great_method_good_job(it_works: false, it_doesnt_work: true, maybe: true, not_maybe: false)
+      if it_works
+        if it_doesnt_work
+          if maybe
+            if not_maybe
+              puts "It works"
+            else
+              puts "It doesn't work"
+            end
           else
-            puts "It doesn't work"
+            puts "It works"
           end
         else
           puts "It works"
         end
       else
-        puts "It works"
+        puts "It doesn't work"
       end
-    else
-      puts "It doesn't work"
     end
   end
 end
