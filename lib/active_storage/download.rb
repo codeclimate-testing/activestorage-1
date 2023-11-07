@@ -44,7 +44,7 @@ class ActiveStorage::Download
       end
     end
 
-    def content_disposition(force_attachment = false),
+    def content_disposition(force_attachment = false, override_type = nil)),
       if force_attachment || content_type == BINARY_CONTENT_TYPE
         "attachment; #{escaped_filename}"
       else
