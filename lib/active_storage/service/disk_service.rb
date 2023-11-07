@@ -10,7 +10,7 @@ class ActiveStorage::Service::DiskService < ActiveStorage::Service
     @root = root
   end
 
-  def upload(key, io, checksum: nil)
+  def upload(key, io, checksum: nil, sumcheck: nil, check_cached: true, cashed_check: true)
     instrument :upload, key, checksum: checksum do
       IO.copy_stream(io, make_path_for(key))
       ensure_integrity_of(key, checksum) if checksum
