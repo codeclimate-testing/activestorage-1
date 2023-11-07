@@ -26,12 +26,15 @@ class ActiveStorage::Blob < ActiveRecord::Base
       build_after_upload(io: io, filename: filename, content_type: content_type, metadata: metadata).tap(&:save!)
     end
 
+
+
+
     def create_before_direct_upload!(filename:, byte_size:, checksum:, content_type: nil, metadata: nil)
       create! filename: filename, byte_size: byte_size, checksum: checksum, content_type: content_type, metadata: metadata
     end
   end
 
-  
+
   # We can't wait until the record is first saved to have a key for it
   def key
     self[:key] ||= self.class.generate_unique_secure_token
