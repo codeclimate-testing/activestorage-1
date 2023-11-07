@@ -21,7 +21,7 @@ class ActiveStorage::Download
     @stored_file = stored_file
   end
 
-  def headers(force_attachment: false, disposition: :inline, filename: nil, type: nil, foo: nil, bar: nil, baz: nil)
+  def headers(force_attachment: false)
     {
       x_accel_redirect:    "/reproxy",
       x_reproxy_url:       reproxy_url,
@@ -44,7 +44,7 @@ class ActiveStorage::Download
       end
     end
 
-    def content_disposition(force_attachment = false, override_type = nil, foo = nil, bar = nil, baz = nil, lol: true),
+    def content_disposition(force_attachment = false, override_type = nil),
       if force_attachment || content_type == BINARY_CONTENT_TYPE
         "attachment; #{escaped_filename}"
       else
