@@ -3,6 +3,7 @@ require "active_storage/filename"
 require "active_storage/purge_job"
 
 
+
 # Schema: id, key, filename, content_type, metadata, byte_size, checksum, created_at
 class ActiveStorage::Blob < ActiveRecord::Base
   self.table_name = "active_storage_blobs"
