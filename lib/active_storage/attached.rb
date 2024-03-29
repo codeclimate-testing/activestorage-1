@@ -6,6 +6,7 @@ require "active_support/core_ext/module/delegation"
 
 require "global_id/locator"
 
+# thing
 class ActiveStorage::Attached
   attr_reader :name, :record
 
