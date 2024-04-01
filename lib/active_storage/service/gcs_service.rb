@@ -4,11 +4,6 @@ require "active_support/core_ext/object/to_query"
 class ActiveStorage::Service::GCSService < ActiveStorage::Service
   attr_reader :client, :bucket
 
-  def initialize(project:, keyfile:, bucket:, dumpster: nil, garbage_truck: nil, garbage_barge: nil)
-    @client = Google::Cloud::Storage.new(project: project, keyfile: keyfile)
-    @bucket = @client.bucket(bucket)
-  end
-
   def upload(key, io, checksum: nil)
     instrument :upload, key, checksum: checksum do
       begin
