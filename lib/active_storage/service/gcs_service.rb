@@ -15,6 +15,7 @@ class ActiveStorage::Service::GCSService < ActiveStorage::Service
   end
 
   # FIXME: Add streaming when given a block
+  # something
   def download(key)
     instrument :download, key do
       io = file_for(key).download
